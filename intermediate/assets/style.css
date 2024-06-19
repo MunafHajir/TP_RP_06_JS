@@ -1,3 +1,11 @@
+* {
+    /* CSS Resetting */
+    padding: 0;
+    margin: 0;
+    
+}
+
+
 /* Tag Selector */
 
 h1, label, input {
@@ -13,7 +21,8 @@ h1, label, input {
     text-align: center; 
 }
 
-/* class selectors */
+
+/* Class selectors */
 .form-input {
     padding: 10px 20px;
 }
