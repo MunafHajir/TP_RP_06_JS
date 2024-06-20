@@ -2,27 +2,60 @@
     /* CSS Resetting */
     padding: 0;
     margin: 0;
-    
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
 /* Tag Selector */
-
-h1, label, input {
-    
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+/* h1, label, input {
+    } */
 
 
 /* Id Selectors */
 
 #title {
-    color: blue; 
+    color: #4B70F5; 
     text-align: center; 
 }
 
 
 /* Class selectors */
-.form-input {
+/* .form-input {
+    padding: 10px 20px;
+} */
+
+
+input[type="submit"] {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Login Page */
+
+.login {
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.login-input {
     padding: 10px 20px;
 }
+
+
+.login-submit {
+    background-color: #402E7A;
+    color: white;
+}
+/* Login End */
+
