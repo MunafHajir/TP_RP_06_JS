@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
 }
 
 
@@ -19,7 +20,7 @@ li {
 /* Id Selectors */
 
 #title {
-    color: #4B70F5; 
+    color: #3DC2EC; 
     text-align: center; 
 }
 
@@ -58,7 +59,7 @@ input[type="submit"] {
 
 
 .login-submit {
-    background-color: #402E7A;
+    background-color: #4B70F5;
     color: white;
 }
 /* Login End */
@@ -70,13 +71,102 @@ input[type="submit"] {
     display: flex;
     justify-content: space-between;
     padding: 20px 40px;
-    background-color: #402E7A;
+    background-color: #4B70F5;
     color: white;
+    position: fixed;
+    right: 45px;
+    left: 45px;
+    z-index: 1;
+}
+
+.nav > div > h1 {
+    font-size: 1.5rem;
 }
 
 /* combinators */
 .nav > div > ul {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
+
+
+.nav > div > ul > li {
+    padding-bottom: 12px;
+}
+
+.nav > div > ul > li:hover {
+    text-underline-offset: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    /* transition: 300ms;
+    transition: all .5s ease-in; */
+    /* border-bottom: 1px solid transparent; */
+}
+
+
 /* Navbar end */
+
+/* Main  */
+.main {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3DC2EC;
+    padding: 120px 80px;
+    height: 80vh;
+    position: relative;
+}
+
+.main-left {
+    width: 40%;
+}
+
+.main-left > img {
+    width: 400px;
+}
+
+.main-right {
+    width: 60%;
+    background-color: #3DC2EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-right > h1 {
+    font-size: 2rem;
+    color: white;
+}
+/* Main End */
+
+/* Enquiry Form */
+    .enquiry-form {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: white;
+        padding: 20px 0;
+        margin: 0 90px; 
+
+        position: absolute;
+        top: 400px;
+        left: 0;
+        right: 0;
+    }
+
+    .enquiry-form > form {
+        display: flex;
+        gap: 20px
+    } 
+
+    .enquiry-input {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .enquire-btn {
+        border-radius: 10px;
+        font-weight: bold;
+    }
+/* Enquiry end */
+
