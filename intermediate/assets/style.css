@@ -6,6 +6,7 @@
     --black_color: #2e2e2e;
     --white_color: #fffbeb;
     --container_padding: 20px;
+    --gutter: 40px;
 }
 
 * {
@@ -31,6 +32,11 @@ li {
 #title {
     color: var(--secondary_color); 
     text-align: center; 
+}
+
+.title {
+    color: var(--secondary_color); 
+    font-size: 2rem;
 }
 
 
@@ -68,6 +74,33 @@ button, input[type="submit"] {
 .container {
     padding: 30px 60px;
 }
+
+.row {
+    max-width: 100%;
+    text-align: center;
+}
+
+.row:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.col-6 {
+   display: inline-block;
+   width: calc((80% - var(--gutter)) / 2);
+}
+
+.col-6:not(:last-child) {
+    margin-right: var(--gutter);
+}
+
+.col-4 {
+    display: inline-block;
+    width: calc((80% - var(--gutter)) / 3);
+}
+.col-4:not(:last-child) {
+    margin-right: var(--gutter);
+}
+ 
 
 /* Login Page */
 
@@ -238,29 +271,58 @@ button, input[type="submit"] {
 /* Our Services */
 
 .our-services {
-    padding: 60px;
-    width: 100%;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
 }
 
-.our-services-row-1 {
-    text-align: center;
+.our-services-content {
+    min-height: 100px;
+    background-color: var(--primary_color);
 }
 
-.our-services-row-1 > div {
-    display: inline-block;
-    width: 40%;
-    background-color: aqua;
-}
+.animated-orange-from-left {
+    width: 80px;
+    height: auto;
 
-
-.row, .row > div {
-    text-align: center;
-}
-
-.col-6 {
-   display: inline-block;
-   width: calc((100% - 20px) / 2);
+    position: absolute;
+    top: 182px;
+    animation: right-move 20s infinite;
 }
 
 
+.animated-orange-from-right {
+    width: 80px;
+    height: auto;
+
+    position: absolute;
+    top: 182px;
+    right: 0;
+    animation: left-move 20s infinite;
+}
+
+@keyframes right-move {
+    from {
+        left: 0;
+        transform:rotate(0deg); 
+    }
+
+    to {
+        left: 420px;
+        transform:rotate(360deg); 
+
+    }
+}
+
+@keyframes left-move {
+    from {
+        right: 0;
+        transform:rotate(0deg); 
+    }
+
+    to {
+        right: 420px;
+        transform:rotate(360deg); 
+    }
+}
 /* Our Services */
