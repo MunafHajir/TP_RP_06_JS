@@ -287,7 +287,12 @@ button, input[type="submit"] {
 
     position: absolute;
     top: 182px;
-    animation: right-move 20s infinite;
+    animation-name: right-move;
+    animation-duration:  10s;
+    animation-timing-function: infinite;
+     /* 0s  */
+    /* 2 */
+    /* animation-direction:  alternate; */
 }
 
 
@@ -298,7 +303,7 @@ button, input[type="submit"] {
     position: absolute;
     top: 182px;
     right: 0;
-    animation: left-move 20s infinite;
+    animation: left-move 10s ease-in 2s;
 }
 
 @keyframes right-move {
@@ -317,12 +322,46 @@ button, input[type="submit"] {
 @keyframes left-move {
     from {
         right: 0;
-        transform:rotate(0deg); 
+        transform:rotate(360deg); 
     }
 
     to {
         right: 420px;
-        transform:rotate(360deg); 
+        transform:rotate(0deg); 
     }
 }
 /* Our Services */
+
+
+/* Standard Breakpoints */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+   .nav > div > ul {
+    display: none;
+   }
+
+   .nav {
+    text-align: center;
+   }
+
+   .main {
+    display: flex;
+    flex-direction: column;
+   }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
