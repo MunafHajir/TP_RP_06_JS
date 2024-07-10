@@ -27,8 +27,19 @@
           id="password"
           required
         />
-        <input type="submit" value="Submit" class="login-submit "/>
+        <input type="submit" value="Submit" class="login-submit" />
       </form>
     </div>
+
+    <script>
+      let response;
+      const api = async () => {
+        response = await fetch("https://api.github.com/users/MunafHajir" );
+        response = await response.json();
+        console.log(response);
+      };
+
+      api();
+    </script>
   </body>
 </html>
